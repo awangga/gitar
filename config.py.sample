@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+"""
+config.py 
+set paramater of your server
+"""
+
+username = "orang"
+password = "gila"
+
