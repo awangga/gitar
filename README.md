@@ -21,7 +21,7 @@ Direktory
 ```sh
 $ mkdir gitar
 $ cd gitar
-$ virtualenv mygitar
+$ virtualenv gitarenv
 $ source mygitar/bin/activate
 $ deactivate
 ```
