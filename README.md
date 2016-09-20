@@ -9,7 +9,7 @@ git auto remote, webhook for auto remote server including deploy, remove, delete
 
 ### Instalation
 ```sh
-# sudo apt-get install python-pip python-dev nginx
+# sudo apt-get install build-essential libssl-dev libffi-dev python-pip python-dev nginx
 # pip install paramiko
 # pip install virtualenv
 # pip install uwsgi
