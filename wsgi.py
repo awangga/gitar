@@ -8,7 +8,6 @@ def application(environ, start_response):
 	uri = environ['REQUEST_URI']
 
 	uri = escape(uri)
-	gr = gitar.Gitar()
 
 	if uri == config.uri1:
 		pid = subprocess.Popen(["nohup", "python", "1pool.py"],stdout=subprocess.PIPE,stderr=subprocess.STDOUT).pid
