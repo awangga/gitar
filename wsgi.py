@@ -6,6 +6,7 @@ def application(environ, start_response):
 	d = parse_qs(environ['QUERY_STRING'])
 	id = d.get('id', [''])[0]	
 
+	id = escape(id)
 	response_body = "isina : "+id
 
 	start_response('200 OK', [('Content-Type', 'text/html')])
