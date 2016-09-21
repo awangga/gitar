@@ -1,4 +1,10 @@
 def application(environ, start_response):
+	response_body = [
+		'%s: %s' % (key, value) for key, value in sorted(environ.items())
+	]
+	response_body = '\n'.join(response_body)
+
 	start_response('200 OK', [('Content-Type', 'text/html')])
-	return ["<h1 style='color:blue'>Gantengin!</h1>"]
+	
+	return [response_body]
 
