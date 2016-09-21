@@ -15,6 +15,6 @@ class Gitar(object):
 
 	def gitpull(self,dir,host,user,pwd): 
 		self.ssh.connect(host,username=user,password=pwd)
-		stdin,stdout,stderr=ssh.exec_command("cd "+dir+";git pull")
+		stdin,stdout,stderr=self.ssh.exec_command("cd "+dir+";git pull")
 		return stdout.readlines()
 
