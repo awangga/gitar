@@ -1,8 +1,12 @@
+#!/usr/bin/env python
+
+from cgi import parse_qs, escape
+
 def application(environ, start_response):
-	response_body = [
-		'%s: %s' % (key, value) for key, value in sorted(environ.items())
-	]
-	response_body = '\n'.join(response_body)
+	d = parse_qs(environ['QUERY_STRING'])
+	id = d.get('id', [''])[0]	
+
+	response_body = "isina : "+id
 
 	start_response('200 OK', [('Content-Type', 'text/html')])
 	
