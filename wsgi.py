@@ -2,7 +2,7 @@
 
 from cgi import escape
 import config
-import subprocess
+import gitar
 
 def application(environ, start_response):
 	uri = environ['REQUEST_URI']
