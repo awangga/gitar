@@ -10,11 +10,11 @@ def application(environ, start_response):
 	uri = escape(uri)
 
 	if uri == config.uri1:
-		pid = subprocess.Popen(["nohup", "python", "1pool.py"],stdout=subprocess.PIPE,stderr=subprocess.STDOUT).pid
-		respon=str(pid)
+		respon=gr.gitpull(config.dir1,config.host1,config.username1,config.password1)		
+		respon=respon[0]
 	elif uri == config.uri2:
-		pid = subprocess.Popen(["nohup", "python", "2pool.py"],stdout=subprocess.PIPE,stderr=subprocess.STDOUT).pid
-		respon=str(pid)
+		respon=gr.gitpull(confid.dir2,config.host2,config.username2,config.password2)
+		respon=respon[0]
 	else:
 		respon="oke"
 
