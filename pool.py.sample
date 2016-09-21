@@ -1,0 +1,14 @@
+#!/usr/bin/env python
+"""
+list of server of application deploy with
+"""
+
+import gitar
+import config
+
+gr.gitpull(config.dir1,config.host1,config.username1,config.password1)		
+gr.gitpull(config.dir1,config.host2,config.username1,config.password1)
+gr.gitpull(config.dir1,config.host3,config.username1,config.password1)
+gr.gitpull(config.dir1,config.host4,config.username1,config.password1)
+
+

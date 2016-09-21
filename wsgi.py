@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
-import gitar
 from cgi import escape
 import config
+import subprocess
 
 def application(environ, start_response):
 	uri = environ['REQUEST_URI']
@@ -11,11 +11,11 @@ def application(environ, start_response):
 	gr = gitar.Gitar()
 
 	if uri == config.uri1:
-		respon=gr.gitpull(config.dir1,config.host1,config.username1,config.password1)		
-		respon=str(respon[0])
+		pid = subprocess.Popen(["nohup", "python", "pool1.py"],stdout=subprocess.PIPE,stderr=subprocess.STDOUT).pid
+		respon=str(pid)
 	elif uri == config.uri2:
-		respon=gr.gitpull(confid.dir2,config.host2,config.username2,config.password2)
-		respon=str(respon[0])
+		pid = subprocess.Popen(["nohup", "python", "pool2.py"],stdout=subprocess.PIPE,stderr=subprocess.STDOUT).pid
+		respon=str(pid)
 	else:
 		respon="oke"
 
