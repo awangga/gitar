@@ -3,8 +3,8 @@
 from cgi import parse_qs, escape
 
 def application(environ, start_response):
-	d = parse_qs(environ['QUERY_STRING'])
-	id = d.get('id', [''])[0]	
+	id = environ['PATH_INFO']
+	#id = d.get('id', [''])[0]	
 
 	id = escape(id)
 	response_body = "isina : "+id
