@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 
-from cgi import parse_qs, escape
+from cgi import escape
 
 def application(environ, start_response):
-	id = environ['PATH_INFO']
-	#id = d.get('id', [''])[0]	
+	uri = environ['REQUEST_URI']
 
-	id = escape(id)
-	response_body = "isina : "+id
+	uri = escape(uri)
+	response_body = "isina : "+uri
 
 	start_response('200 OK', [('Content-Type', 'text/html')])
 	
