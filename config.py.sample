@@ -6,6 +6,9 @@ set paramater of your server
 uri1 = "/app0"
 dir1 = "/home/app/app0" 
 host1 = "10.14.0.22"
+host2 = "10.14.0.21"
+host3 = "10.14.0.20"
+host4 = "10.14.0.19"
 username1 = "orang"
 password1 = "gila"
 
