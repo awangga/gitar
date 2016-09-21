@@ -8,6 +8,7 @@ def application(environ, start_response):
 	uri = environ['REQUEST_URI']
 
 	uri = escape(uri)
+	gr = gitar.Gitar()	
 
 	if uri == config.uri1:
 		respon=gr.gitpull(config.dir1,config.host1,config.username1,config.password1)		
