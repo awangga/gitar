@@ -13,7 +13,7 @@ class Gitar(object):
 		self.ssh=paramiko.SSHClient()
 		self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 
-	def gitpull(self,dir,host,user,pwd) 
+	def gitpull(self,dir,host,user,pwd): 
 		ssh.connect(host,username=user,password=pwd)
 		stdin,stdout,stderr=ssh.exec_command("cd "+dir+";git pull")
 		return stdout.readlines()
