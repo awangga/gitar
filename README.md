@@ -33,3 +33,16 @@ $ sudo cp gitar.conf /etc/init/
 $ sudo start gitar
 ```
 
+nginx
+
+```sh
+server {
+    listen 80;
+    server_name gitar.vas.web.id;
+
+    location / {
+        include         uwsgi_params;
+        uwsgi_pass      unix:/home/devops/gitar/gitar.sock;
+    }
+}
+```
