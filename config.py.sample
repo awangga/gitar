@@ -4,11 +4,13 @@ config.py
 set paramater of your server
 """
 
-host1= "10.14.0.22"
+dir1 = "/home/app/app0" 
+host1 = "10.14.0.22"
 username1 = "orang"
 password1 = "gila"
 
-host2= "10.14.0.24"
+dir2 = "/home/app/app1"
+host2 = "10.14.0.24"
 username1 = "okooo"
 password1 = "lelet"
 
