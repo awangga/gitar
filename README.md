@@ -29,6 +29,7 @@ $ deactivate
 uwsgi
 
 ```sh
-$ vi gitar/main.py
+$ sudo cp gitar.conf /etc/init/
+$ sudo start gitar
 ```
 
