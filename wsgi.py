@@ -12,8 +12,10 @@ def application(environ, start_response):
 
 	if uri == config.uri1:
 		respon=gr.gitpull(config.dir1,config.host1,config.username1,config.password1)		
+		respon=respon[0]
 	elif uri == config.uri2:
 		respon=gr.gitpull(confid.dir2,config.host2,config.username2,config.password2)
+		respon=respon[0]
 	else:
 		respon="oke"
 
