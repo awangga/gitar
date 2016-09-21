@@ -11,10 +11,10 @@ def application(environ, start_response):
 	gr = gitar.Gitar()
 
 	if uri == config.uri1:
-		pid = subprocess.Popen(["nohup", "python", "pool1.py"],stdout=subprocess.PIPE,stderr=subprocess.STDOUT).pid
+		pid = subprocess.Popen(["nohup", "python", "1pool.py"],stdout=subprocess.PIPE,stderr=subprocess.STDOUT).pid
 		respon=str(pid)
 	elif uri == config.uri2:
-		pid = subprocess.Popen(["nohup", "python", "pool2.py"],stdout=subprocess.PIPE,stderr=subprocess.STDOUT).pid
+		pid = subprocess.Popen(["nohup", "python", "2pool.py"],stdout=subprocess.PIPE,stderr=subprocess.STDOUT).pid
 		respon=str(pid)
 	else:
 		respon="oke"
