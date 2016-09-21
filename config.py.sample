@@ -4,6 +4,11 @@ config.py
 set paramater of your server
 """
 
-username = "orang"
-password = "gila"
+host1= "10.14.0.22"
+username1 = "orang"
+password1 = "gila"
+
+host2= "10.14.0.24"
+username1 = "okooo"
+password1 = "lelet"
 
