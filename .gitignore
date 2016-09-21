@@ -1,2 +1,4 @@
 *.py[cod]
+*pool.py[cod]
+*pool.py
 config.py
